@@ -3,8 +3,6 @@ import java.util.Scanner;
 
 class Main {
 
-   private static final char[] EnergiaPerdida = null;
-
    public static void main(String[] argas) {
 
       Personagem Wictor = new Personagem();
@@ -108,10 +106,10 @@ class Main {
             System.out.println();
             System.out.println(QuintoCapitulo);
 
-         } else if (Resposta.equals(Escolha2PrimieiroCapitulo)) {
-            System.out.println(TerceitoCapitulo);
-            Wictor.ModificadorDeEnergia("Wictor", 100);
          }
+      } else if (Resposta.equals(Escolha2PrimieiroCapitulo)) {
+         System.out.println(TerceitoCapitulo);
+         Wictor.ModificadorDeEnergia("Wictor", 100);
 
       }
 
