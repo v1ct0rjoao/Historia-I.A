@@ -1,28 +1,41 @@
+import javax.swing.SpringLayout;
+
 public class Personagem {
 
     String Nome;
-    int Energia;
+    int Coragem;
 
     public void CriarPersonagem(String NomeDosoldado, int EnergiaDoSoldado) {
         this.Nome = NomeDosoldado;
-        this.Energia = 100;
+        this.Coragem = 100;
     }
 
-    public void ModificadorDeEnergia(int EnerguiaNoJogo) {
+    public void ModificadorDeEnergia(String Nome, int EnergiaNojogo) {
 
-        this.Energia = Energia + EnerguiaNoJogo;
+        this.Coragem = Coragem - EnergiaNojogo;
+        this.Nome = Nome;
+        ;
 
-        if (Energia < 100) {
-            System.out.println("Não Resistiu as pressões tomou: " + EnerguiaNoJogo + " de dano psicologico");
+        if (Coragem < 100) {
+            System.out.println();
+            System.out.println(Nome + " não Resistiu a pressão do teste, recebeu: " + EnergiaNojogo
+                    + " de dano psicologico, agora tem: "
+                    + Coragem + " de Coragem");
         }
 
-        if (Energia > 100) {
-            Energia = 100;
+        if (Coragem > 100) {
+            Coragem = 100;
         }
 
-        else if (Energia < 0) {
-            Energia = 0;
-            System.out.println("A pressão do teste tomou do Soldado e infelizmente não consegui prosseguir");
+        if (Coragem < 0) {
+            Coragem = 0;
+
+        }
+
+        if (Coragem == 0) {
+            System.out.println();
+            System.out.println("Para " + Nome
+                    + " o teste se torna exaustivo e atingi o fatalmente a mente do soldado, infelizmente não suportou e foi desqualificado");
         }
 
     }
