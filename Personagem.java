@@ -1,20 +1,17 @@
-import javax.swing.SpringLayout;
 
 public class Personagem {
 
     String Nome;
     int Coragem;
 
-    public void CriarPersonagem(String NomeDosoldado, int EnergiaDoSoldado) {
+    public Personagem(String NomeDosoldado, int EnergiaDoSoldado) {
         this.Nome = NomeDosoldado;
         this.Coragem = 100;
     }
 
-    public void ModificadorDeEnergia(String Nome, int EnergiaNojogo) {
+    public void ModificadorDeEnergia(int EnergiaNojogo) {
 
         this.Coragem = Coragem - EnergiaNojogo;
-        this.Nome = Nome;
-        ;
 
         if (Coragem < 100) {
             System.out.println();

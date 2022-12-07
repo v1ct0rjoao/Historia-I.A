@@ -5,15 +5,15 @@ class Main {
 
    public static void main(String[] argas) {
 
-      Personagem Wictor = new Personagem();
-      Personagem Brain = new Personagem();
-      Scanner leitor = new Scanner(System.in);
-      String Resposta;
-      Wictor.CriarPersonagem("Wictor", 100);
-      Brain.CriarPersonagem("Brian", 100);
+      Personagem Wictor;
+      Personagem Brain;
 
-      String PrimeiroCapitulo = "---- Reconhecimento ----\n\n" +
-            "Olá recruta me chamo Alan sou a inteligencia artificial\n" +
+      String Resposta;
+      Wictor = new Personagem("Wictor", 100);
+      Brain = new Personagem("Brian", 100);
+
+      String Titulo1 = "---- Reconhecimento ----\n\n";
+      String PrimeiroCapitulo = "Olá recruta me chamo Alan sou a inteligencia artificial\n" +
             "responsavel testar suas habilidades fisicas e mentais\n" +
             "O primeiro teste é de coragem, bem simples, espero que se\n" +
             "saia bem\n\n" +
@@ -22,14 +22,13 @@ class Main {
             "Você olha para baixo e não percebe fim, o local parece um\n" +
             "abismo.\n" +
             ">>> Alan - Você tem a opção de saltar ou desistir, qual você escolher?\n\n" +
-            "- saltar \n\n- desistir\n\n" +
             "DIGITE: ";
 
       String Escolha1PrimieiroCapitulo = "saltar";
       String Escolha2PrimieiroCapitulo = "desistir";
 
-      String SegundoCapitulo = "---- O bom recruta ----\n\n" +
-            "Mesmo em pânico, sentidos confusos, você salta do terraço.\n" +
+      String Titulo2 = "---- O bom recruta ----\n\n";
+      String SegundoCapitulo = "Mesmo em pânico, sentidos confusos, você salta do terraço.\n" +
             "Afinal, você nasceu para ser um soldado. Quando você pula\n" +
             "senti a sensação que aquele abismo não tem fim, até que alguns\n" +
             "feixes de luz, começam a sair do chão.\n\n" +
@@ -45,15 +44,14 @@ class Main {
             "atirar um no outro ao mesmo tempo e não morrer e ser desqualificado ou apenas um\n" +
             "atirar e ser aprovado no teste\n\n" +
             "Vocês estão um em frente o outro:\n\n" +
-            "- Atirar juntos\n\n - Brain atira \n\n" +
             "DIGITE:";
 
       String Escolha1SegundoCapitulo = "atirar juntos";
       String Escolha2SegundoCapitulo = "Brain atira";
 
       // Esse capitulo se refere a segunda escolha do primeiro capitulo
-      String TerceitoCapitulo = "---- FRACASSADO ----\n\n" +
-            "Você entra em pânico e mesmo você querendo ir o seu corpo\n" +
+      String Titulo3 = "---- FRACASSADO ----\n\n";
+      String TerceitoCapitulo = "Você entra em pânico e mesmo você querendo ir o seu corpo\n" +
             "não te obedece e infelizmente desisti de saltar\n\n" +
             ">>> Alan - é uma pena não conseguir, seu pai tinha muita expectativa sobre você recruta\n" +
             "mas tudo bem os medrosos e covardes podem viver em paz, junto com os sem facções\n" +
@@ -61,8 +59,9 @@ class Main {
             "Dois homens surgem do seu lado e te levam até saída e te jogam, como lixo na rua\n" +
             "em meio aos drogados";
       // se refere a Escolha1SegundoCapitulo
-      String QuartoCapitulo = "---- Um Voto de amizade ----\n\n" +
-            "Vocês dois não se conhecem, mas como irmaõs de guerra, decidem usar\n" +
+
+      String Titulo4 = "---- Um Voto de amizade ----\n\n";
+      String QuartoCapitulo = "Vocês dois não se conhecem, mas como irmaõs de guerra, decidem usar\n" +
             "as armas ao mesmo, miram um no outro e quando clicam no gatilho sai confete\n\n" +
             ">>>> Alan - Parabéns, vocês são oficialmente soldados da ARQUIA\n" +
             "aqui dentro devem sempre manter esses principios, nunca deixem um amigo para trás\n\n" +
@@ -70,8 +69,8 @@ class Main {
             "por liderar chamados de paz em outros países secretamente\n\n" +
             "FIM DO LIVRO";
       // se refere a Escolha2SegundoCapitulo
-      String QuintoCapitulo = "---- Diplomata ----\n\n" +
-            ">>>>" + Wictor.Nome + " - atira em mim, não tem bala dentro, eu tenho certeza\n" +
+      String Titulo5 = "---- Diplomata ----\n\n";
+      String QuintoCapitulo = ">>>>" + Wictor.Nome + " - atira em mim, não tem bala dentro, eu tenho certeza\n" +
             "eles nunca iam matar dois recrutas.\n\n" +
             ">>>>" + Brain.Nome + " - Você é maluco, mas só quem sai ganhando sou mesmo\n" +
             "agora se você morrer a culpa é sua!!\n\n" +
@@ -82,34 +81,47 @@ class Main {
             "da ARQUIA e vão fazer parte das forças especias de solução de guerras internacionais\n\n" +
             "FIM DO LIVRO";
 
-      System.out.println(PrimeiroCapitulo);
+      Capitulo capitulo1;
+      Capitulo capitulo2;
+      Capitulo capitulo3;
+      Capitulo capitulo4;
+      Capitulo capitulo5;
+
+      Scanner leitor = new Scanner(System.in);
+
+      capitulo1 = new Capitulo(Titulo1, PrimeiroCapitulo,
+            Escolha1PrimieiroCapitulo, Escolha2PrimieiroCapitulo,
+            Wictor, 20);
+
+      capitulo1.Mostrar();
       Resposta = leitor.nextLine();
       System.out.println();
       System.out.println("\n\n");
 
       if (Resposta.equals(Escolha1PrimieiroCapitulo)) {
-         Wictor.ModificadorDeEnergia("Wictor", 20);
-         System.out.println();
-         System.out.println(SegundoCapitulo);
+
+         capitulo2 = new Capitulo(Titulo2, SegundoCapitulo, Escolha1SegundoCapitulo, Escolha2SegundoCapitulo, Brain,
+               40);
+         capitulo2.Mostrar();
          Resposta = leitor.nextLine();
+
          System.out.println();
 
          if (Resposta.equals(Escolha1SegundoCapitulo)) {
-            Brain.ModificadorDeEnergia("Brain", 30);
-            Wictor.ModificadorDeEnergia("Wictor", 40);
-            System.out.println();
-            System.out.println(QuartoCapitulo);
+
+            capitulo4 = new Capitulo(Titulo4, QuartoCapitulo, "", "", Brain, 30);
+            capitulo4.Mostrar();
 
          } else if (Resposta.equals(Escolha2SegundoCapitulo)) {
-            Brain.ModificadorDeEnergia("Brain", 50);
-            Wictor.ModificadorDeEnergia("Wictor", 40);
-            System.out.println();
-            System.out.println(QuintoCapitulo);
+
+            capitulo5 = new Capitulo(Titulo5, QuintoCapitulo, "", "", Wictor, 50);
+            capitulo5.Mostrar();
 
          }
+
       } else if (Resposta.equals(Escolha2PrimieiroCapitulo)) {
-         System.out.println(TerceitoCapitulo);
-         Wictor.ModificadorDeEnergia("Wictor", 100);
+         capitulo3 = new Capitulo(Titulo3, TerceitoCapitulo, "", "Escolha2Docapitulo", Wictor, 100);
+         capitulo3.Mostrar();
 
       }
 
