@@ -9,6 +9,7 @@ class Main {
 
             Personagem Meredith = new Personagem("Meredith", 100);
             Personagem Alan = new Personagem("Alan", 100);
+            Scanner leitor = new Scanner(System.in);
 
             String Titulo1 = "---- A Figura Misteriosa ----\n\n";
             String PrimeiroCapitulo = "Acordando...\n\n" +
@@ -29,7 +30,7 @@ class Main {
                         "vestido como se fosse um paciente, com as mãos cobertas de sangue...\n" +
                         "você consegue ouvir uma voz gritando desesperada, uma mulher,pedindo\n" +
                         "praticamente implora para você fugir...\n" +
-                        "olhando ao redor à muitos corpos ao seu redor, assustado você...\n";
+                        "olhando ao redor à muitos corpos ao seu redor assustado você...\n";
 
             String Escolha1TerceiroCapitulo = "foge";
             String Escolha2QuartoCapitulo = "fica";
@@ -60,7 +61,7 @@ class Main {
                         "pisa na cabela deles, até esmagar...\n\n" +
                         "-- Ele VEM TE PEG...\n\n" +
                         "você pega a mulher nos braços e consegue finalmente fugir dali...\n\n" +
-                        "Alan perde 10 de Alma, por algum motivo aquela arma suga a vida dele, enquanto usa...";
+                        "Alan ganha 10 de vida, como se arma sugasse a energia dos seres que ela mata";
 
             // se refere a Escolha2SegundoCapitulo
             String Titulo5 = "---- Mal entendido ----\n\n";
@@ -71,7 +72,7 @@ class Main {
                         "a figura que falava com você sumia lentamente como poeira ao vento\n" +
                         "todos os sons de pessoas morrendo, gritando, desesperadas se repetem milhares de vezes\n" +
                         "na sua cabeça...\n" +
-                        "Alan perde 90 de sanidade\n\n" +
+                        "Alan perde 90 de vida\n\n" +
                         "ALGUNS MESES DEPOIS...\n\n" +
                         "você acorda no mesmo lugar, mas a dor e sofrimento foi tanta, que sua mente foi destruida...\n"
                         +
@@ -81,6 +82,27 @@ class Main {
                         Escolha2QuintoCapitulo, null, 0);
 
             PrimeiroTexto.Mostrar();
+            String Resposta = leitor.next();
+            if (Resposta.equals(Escolha1SegundoCapituloo)) {
+                  Capitulo SegundoTexto = new Capitulo(Titulo2, SegundoCapitulo, Escolha1TerceiroCapitulo,
+                              Escolha2QuartoCapitulo, Alan, 0);
+                  SegundoTexto.Mostrar();
+                  Resposta = leitor.next();
 
+                  if (Resposta.equals(Escolha1TerceiroCapitulo)) {
+                        Capitulo TerceiroTexto = new Capitulo(Titulo3, TerceitoCapitulo, "", "", Meredith, -100);
+                        TerceiroTexto.Mostrar();
+                  }
+
+                  if (Resposta.equals(Escolha2QuartoCapitulo)) {
+                        Capitulo QuartoTexto = new Capitulo(Titulo4, QuartoCapitulo, "", "", Alan, 10);
+                        QuartoTexto.Mostrar();
+                  }
+                  if (Resposta.equals(Escolha2QuintoCapitulo)) {
+                        Capitulo QuintoTexto = new Capitulo(Titulo5, QuintoCapitulo, "", "", Alan, -100);
+                        QuintoTexto.Mostrar();
+                  }
+
+            }
       }
 }

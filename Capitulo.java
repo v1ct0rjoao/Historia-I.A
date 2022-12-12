@@ -25,17 +25,16 @@ class Capitulo {
     }
 
     public void Mostrar() {
-
         System.out.println(nome);
         System.out.println(texto);
         System.out.println();
         System.out.println(escolha1);
         System.out.println();
         System.out.println(escolha2);
-        System.out.println();
-        System.err.println("Resposta: ");
-        String resposta = leitor.next();
 
+        if (ModificadorDeEnergia > 0) {
+            this.personagem.ModificadorDeEnergia(ModificadorDeEnergia);
+        }
     }
 
 }

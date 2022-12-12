@@ -11,14 +11,7 @@ public class Personagem {
 
     public void ModificadorDeEnergia(int EnergiaNojogo) {
 
-        this.Coragem = Coragem - EnergiaNojogo;
-
-        if (Coragem < 100) {
-            System.out.println();
-            System.out.println(Nome + " não Resistiu a pressão do teste, recebeu: " + EnergiaNojogo
-                    + " de dano psicologico, agora tem: "
-                    + Coragem + " de Coragem");
-        }
+        this.Coragem = Coragem + EnergiaNojogo;
 
         if (Coragem > 100) {
             Coragem = 100;
@@ -31,8 +24,8 @@ public class Personagem {
 
         if (Coragem == 0) {
             System.out.println();
-            System.out.println("Para " + Nome
-                    + " o teste se torna exaustivo e atingi o fatalmente a mente do soldado, infelizmente não suportou e foi desqualificado");
+            System.out.println(Nome
+                    + " não resisti e perde toda sua vida");
         }
 
     }
