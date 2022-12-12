@@ -25,12 +25,12 @@ class Capitulo {
     }
 
     public void mostrar() {
-        System.out.println(nome);
-        System.out.println(texto);
+        System.out.println(this.nome);
+        System.out.println(this.texto);
         System.out.println();
-        System.out.println("- "+ escolha1);
+        System.out.println("- "+ this.escolha1);
         System.out.println();
-        System.out.println("- " +escolha2);
+        System.out.println("- " + this.escolha2);
         
 
         if (ModificadorDeEnergia > 0) {
