@@ -3,127 +3,84 @@ import java.util.Scanner;
 
 class Main {
 
-   public static void main(String[] argas) {
+      private static String Escolha1TerceiroCapitulo;
 
-      Personagem Wictor;
-      Personagem Brain;
+      public static void main(String[] argas) {
 
-      String Resposta;
-      Wictor = new Personagem("Wictor", 100);
-      Brain = new Personagem("Brian", 100);
+            Personagem Meredith = new Personagem("Meredith", 100);
+            Personagem Alan = new Personagem("Alan", 100);
 
-      String Titulo1 = "---- Reconhecimento ----\n\n";
-      String PrimeiroCapitulo = "Olá recruta me chamo Alan sou a inteligencia artificial\n" +
-            "responsavel testar suas habilidades fisicas e mentais\n" +
-            "O primeiro teste é de coragem, bem simples, espero que se\n" +
-            "saia bem\n\n" +
-            ">>>>Você é levado até um terrraço<<<<\n\n" +
-            ">>> Alan - Para conseguir consquistar o objetivo nesse teste é preciso que salte do terraço\n\n" +
-            "Você olha para baixo e não percebe fim, o local parece um\n" +
-            "abismo.\n" +
-            ">>> Alan - Você tem a opção de saltar ou desistir, qual você escolher?\n\n" +
-            "DIGITE: ";
+            String Titulo1 = "---- A Figura Misteriosa ----\n\n";
+            String PrimeiroCapitulo = "Acordando...\n\n" +
+                        "ainda meio atordoado você ouve uma voz...\n" +
+                        "-- Olá Alan,espero que ainda se lembre de mim?...\n" +
+                        "antes que levantasse da cama, uma força incomum empurra você...\n" +
+                        "-- Acho que não rsrsr\n" +
+                        "-- Vim fazer a mesma proposta da ultima vez, poder, familia, tudo...\n" +
+                        "que você desejar e a única condição é lealdade a mim...\n" +
+                        "-- o que me diz?";
 
-      String Escolha1PrimieiroCapitulo = "saltar";
-      String Escolha2PrimieiroCapitulo = "desistir";
+            String Escolha1SegundoCapituloo = "aceito";
+            String Escolha2QuintoCapitulo = "recuso";
 
-      String Titulo2 = "---- O bom recruta ----\n\n";
-      String SegundoCapitulo = "Mesmo em pânico, sentidos confusos, você salta do terraço.\n" +
-            "Afinal, você nasceu para ser um soldado. Quando você pula\n" +
-            "senti a sensação que aquele abismo não tem fim, até que alguns\n" +
-            "feixes de luz, começam a sair do chão.\n\n" +
-            ">>> Alan - Meus parabéns recruta, nem questionou as ordens, passou no primeiro teste.\n\n" +
-            "quando você ver o Alan,percebe que tudo aquilo se desmanchava e no final, você\n" +
-            "estava dentro de um tipo de ilusão\n\n" +
-            ">>> Alan - isso tudo era apenas um cenario holografico,\n" +
-            "seu segundo teste, vai ser mais dificil, pois vão ser dois testes\n" +
-            "simultaneos, você e outro recruta.\n\n" +
-            "é colocado uma caixa proxima a vocês dois, com duas armas\n\n" +
-            ">>> Alan - essas duas armas funcionam eletronicamente, elas só\n" +
-            "desarmam se foram apertado o gatilho ao mesmo tempo, vocês tem duas opcôes\n" +
-            "atirar um no outro ao mesmo tempo e não morrer e ser desqualificado ou apenas um\n" +
-            "atirar e ser aprovado no teste\n\n" +
-            "Vocês estão um em frente o outro:\n\n" +
-            "DIGITE:";
+            String Titulo2 = "---- O paciente ----\n\n";
+            String SegundoCapitulo = "AlANN... AlAAN... CORREEE!\n\n" +
+                        "alguns segundos depois de aceitar a proposta, você esta em pé\n" +
+                        "vestido como se fosse um paciente, com as mãos cobertas de sangue...\n" +
+                        "você consegue ouvir uma voz gritando desesperada, uma mulher,pedindo\n" +
+                        "praticamente implora para você fugir...\n" +
+                        "olhando ao redor à muitos corpos ao seu redor, assustado você...\n";
 
-      String Escolha1SegundoCapitulo = "atirar juntos";
-      String Escolha2SegundoCapitulo = "Brain atira";
+            String Escolha1TerceiroCapitulo = "foge";
+            String Escolha2QuartoCapitulo = "fica";
 
-      // Esse capitulo se refere a segunda escolha do primeiro capitulo
-      String Titulo3 = "---- FRACASSADO ----\n\n";
-      String TerceitoCapitulo = "Você entra em pânico e mesmo você querendo ir o seu corpo\n" +
-            "não te obedece e infelizmente desisti de saltar\n\n" +
-            ">>> Alan - é uma pena não conseguir, seu pai tinha muita expectativa sobre você recruta\n" +
-            "mas tudo bem os medrosos e covardes podem viver em paz, junto com os sem facções\n" +
-            "espero que sobreviva sozinho, pode seguir estes homens.\n\n" +
-            "Dois homens surgem do seu lado e te levam até saída e te jogam, como lixo na rua\n" +
-            "em meio aos drogados";
-      // se refere a Escolha1SegundoCapitulo
+            // Esse capitulo se refere a segunda escolha do primeiro capitulo
+            String Titulo3 = "---- Apenas uma casca ----\n\n";
+            String TerceitoCapitulo = "Alan ouve sua voz e dispira na tentiva e fugir, infelizmente você está\n" +
+                        "com ferimentos graves, mas mesmo assim tentava fugir, daquelas coisas...\n" +
+                        "-- não fujaa Meredith, ele te deixou para atrás, ele nem lembra quem é você\n" +
+                        "a voz sussura em seus ouvidos, com um tom de deboche. Cada parte do seu corpo\n" +
+                        "fica em choque, o medo toma conta do seu corpo, como se fosse um vírus\n" +
+                        "o homem, ou sei la, criatura te agarra pelo pescoço e te joga na parede\n" +
+                        "-- Já viu o inferno Meredith?!...\n" +
+                        "segurando você pelo pescoço ele aproxima aqueles olhos de fogo, e cada gota\n" +
+                        "de alegria, e paz dentro do seu corpo esvazia, tornando você um\n" +
+                        "pedaço de carne, sem vida, apenas o vazio...\n" +
+                        "Meredith perdeu 100 de vida\n" +
+                        "-- Não preocupe ele vai se juntar a você rsrsrs...\n\n";
 
-      String Titulo4 = "---- Um Voto de amizade ----\n\n";
-      String QuartoCapitulo = "Vocês dois não se conhecem, mas como irmaõs de guerra, decidem usar\n" +
-            "as armas ao mesmo, miram um no outro e quando clicam no gatilho sai confete\n\n" +
-            ">>>> Alan - Parabéns, vocês são oficialmente soldados da ARQUIA\n" +
-            "aqui dentro devem sempre manter esses principios, nunca deixem um amigo para trás\n\n" +
-            "Recruta 1 e Recruta 2 são classificados como guerreiros da paz da ARQUIA, serão responsave´s\n" +
-            "por liderar chamados de paz em outros países secretamente\n\n" +
-            "FIM DO LIVRO";
-      // se refere a Escolha2SegundoCapitulo
-      String Titulo5 = "---- Diplomata ----\n\n";
-      String QuintoCapitulo = ">>>>" + Wictor.Nome + " - atira em mim, não tem bala dentro, eu tenho certeza\n" +
-            "eles nunca iam matar dois recrutas.\n\n" +
-            ">>>>" + Brain.Nome + " - Você é maluco, mas só quem sai ganhando sou mesmo\n" +
-            "agora se você morrer a culpa é sua!!\n\n" +
-            "quando o " + Brain.Nome + " puxa o gatilho percebe que recruta 1 estava certo\n" +
-            "Alan aparece em um monitor grande dentro da sala\n\n" +
-            ">>>> Alan - Parabéns Recrutas, confiança, estrategia e diplomacia\n" +
-            "tudo isso cria um bom soldado, os dois estão aprovados, vocês fazem parte\n" +
-            "da ARQUIA e vão fazer parte das forças especias de solução de guerras internacionais\n\n" +
-            "FIM DO LIVRO";
+            String Titulo4 = "---- O guerreiro ----\n\n";
+            String QuartoCapitulo = "A voz implora para você fugir, mas não consegue...\n" +
+                        "um sentimento de fúria e vontade toma conta do seu corpo\n" +
+                        "o bracelente no seu braço direito, se torna uma especie de armadura\n" +
+                        "e todo seu braço direito fica coberto dessa armadura, e sem pensar você avança\n" +
+                        "em direção aos homens que estão atacando Meredith, o primeiro deles mal ver\n" +
+                        "você se aproximando e ele so senti que estava sem a cabeça segundos depois\n" +
+                        "o outro tenta fugir, mas suas mãos e braços são arrancados, já no chão, você\n" +
+                        "pisa na cabela deles, até esmagar...\n\n" +
+                        "-- Ele VEM TE PEG...\n\n" +
+                        "você pega a mulher nos braços e consegue finalmente fugir dali...\n\n" +
+                        "Alan perde 10 de Alma, por algum motivo aquela arma suga a vida dele, enquanto usa...";
 
-      Capitulo capitulo1;
-      Capitulo capitulo2;
-      Capitulo capitulo3;
-      Capitulo capitulo4;
-      Capitulo capitulo5;
+            // se refere a Escolha2SegundoCapitulo
+            String Titulo5 = "---- Mal entendido ----\n\n";
+            String QuintoCapitulo = "Sem consegui falar, você balança a cabeça recusa...\n" +
+                        "neste exato momento, sons de tiros que parecem proximos\n" +
+                        "muitos gritos e pessoas pedindo socorro ...\n" +
+                        "-- você devia ter aceitado Alan, era a única forma de salvar essas pessoas...\n\n" +
+                        "a figura que falava com você sumia lentamente como poeira ao vento\n" +
+                        "todos os sons de pessoas morrendo, gritando, desesperadas se repetem milhares de vezes\n" +
+                        "na sua cabeça...\n" +
+                        "Alan perde 90 de sanidade\n\n" +
+                        "ALGUNS MESES DEPOIS...\n\n" +
+                        "você acorda no mesmo lugar, mas a dor e sofrimento foi tanta, que sua mente foi destruida...\n"
+                        +
+                        "a única coisa que você fala é \"aceito... aceito..\" ";
 
-      Scanner leitor = new Scanner(System.in);
+            Capitulo PrimeiroTexto = new Capitulo(Titulo1, PrimeiroCapitulo, Escolha1SegundoCapituloo,
+                        Escolha2QuintoCapitulo, null, 0);
 
-      capitulo1 = new Capitulo(Titulo1, PrimeiroCapitulo,
-            Escolha1PrimieiroCapitulo, Escolha2PrimieiroCapitulo,
-            Wictor, 20);
-
-      capitulo1.Mostrar();
-      Resposta = leitor.nextLine();
-      System.out.println();
-      System.out.println("\n\n");
-
-      if (Resposta.equals(Escolha1PrimieiroCapitulo)) {
-
-         capitulo2 = new Capitulo(Titulo2, SegundoCapitulo, Escolha1SegundoCapitulo, Escolha2SegundoCapitulo, Brain,
-               40);
-         capitulo2.Mostrar();
-         Resposta = leitor.nextLine();
-
-         System.out.println();
-
-         if (Resposta.equals(Escolha1SegundoCapitulo)) {
-
-            capitulo4 = new Capitulo(Titulo4, QuartoCapitulo, "", "", Brain, 30);
-            capitulo4.Mostrar();
-
-         } else if (Resposta.equals(Escolha2SegundoCapitulo)) {
-
-            capitulo5 = new Capitulo(Titulo5, QuintoCapitulo, "", "", Wictor, 50);
-            capitulo5.Mostrar();
-
-         }
-
-      } else if (Resposta.equals(Escolha2PrimieiroCapitulo)) {
-         capitulo3 = new Capitulo(Titulo3, TerceitoCapitulo, "", "Escolha2Docapitulo", Wictor, 100);
-         capitulo3.Mostrar();
+            PrimeiroTexto.Mostrar();
 
       }
-
-   }
 }
