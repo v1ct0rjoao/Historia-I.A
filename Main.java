@@ -9,7 +9,8 @@ class Main {
 
             Personagem Meredith = new Personagem("Meredith", 100);
             Personagem Alan = new Personagem("Alan", 100);
-            Scanner leitor = new Scanner(System.in);
+            int Resposta;
+           
 
             String Titulo1 = "---- A Figura Misteriosa ----\n\n";
             String PrimeiroCapitulo = "Acordando...\n\n" +
@@ -78,31 +79,39 @@ class Main {
                         +
                         "a única coisa que você fala é \"aceito... aceito..\" ";
 
-            Capitulo PrimeiroTexto = new Capitulo(Titulo1, PrimeiroCapitulo, Escolha1SegundoCapituloo,
-                        Escolha2QuintoCapitulo, null, 0);
+            Capitulo PrimeiroTexto = new Capitulo(Titulo1, PrimeiroCapitulo, Escolha1SegundoCapituloo,Escolha2QuintoCapitulo, null, 0);
+            Capitulo SegundoTexto = new Capitulo(Titulo2, SegundoCapitulo, Escolha1TerceiroCapitulo, Escolha2QuartoCapitulo, Alan, 0);
+            Capitulo TerceiroTexto = new Capitulo(Titulo3, TerceitoCapitulo, "", "", Meredith, -100);
+            Capitulo QuartoTexto = new Capitulo(Titulo4, QuartoCapitulo, "", "", Alan, 10);
+            Capitulo QuintoTexto = new Capitulo(Titulo5, QuintoCapitulo, "", "", Alan, -100);
+            
+          
+           PrimeiroTexto.mostrar();
+           Resposta = PrimeiroTexto.escolher();
 
-            PrimeiroTexto.Mostrar();
-            String Resposta = leitor.next();
-            if (Resposta.equals(Escolha1SegundoCapituloo)) {
-                  Capitulo SegundoTexto = new Capitulo(Titulo2, SegundoCapitulo, Escolha1TerceiroCapitulo,
-                              Escolha2QuartoCapitulo, Alan, 0);
-                  SegundoTexto.Mostrar();
-                  Resposta = leitor.next();
 
-                  if (Resposta.equals(Escolha1TerceiroCapitulo)) {
-                        Capitulo TerceiroTexto = new Capitulo(Titulo3, TerceitoCapitulo, "", "", Meredith, -100);
-                        TerceiroTexto.Mostrar();
-                  }
+          
+           
+      if(Resposta == 1)
+      {
+            SegundoTexto.mostrar();
+            SegundoTexto.escolher();
 
-                  if (Resposta.equals(Escolha2QuartoCapitulo)) {
-                        Capitulo QuartoTexto = new Capitulo(Titulo4, QuartoCapitulo, "", "", Alan, 10);
-                        QuartoTexto.Mostrar();
-                  }
-                  if (Resposta.equals(Escolha2QuintoCapitulo)) {
-                        Capitulo QuintoTexto = new Capitulo(Titulo5, QuintoCapitulo, "", "", Alan, -100);
-                        QuintoTexto.Mostrar();
-                  }
-
+            if(Resposta == 1)
+            {
+                  TerceiroTexto.mostrar();
+            }
+            else if(Resposta == 2)
+            {
+                  QuartoTexto.mostrar();
             }
       }
-}
+      else if(Resposta == 2)
+      {
+            QuintoTexto.mostrar();
+      }
+      
+            
+          
+            }
+      }

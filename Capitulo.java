@@ -24,17 +24,53 @@ class Capitulo {
         this.ModificadorDeEnergia = AlteracaoDeEnergiaDoCapitulo;
     }
 
-    public void Mostrar() {
+    public void mostrar() {
         System.out.println(nome);
         System.out.println(texto);
         System.out.println();
-        System.out.println(escolha1);
+        System.out.println("- "+ escolha1);
         System.out.println();
-        System.out.println(escolha2);
+        System.out.println("- " +escolha2);
+        
 
         if (ModificadorDeEnergia > 0) {
             this.personagem.ModificadorDeEnergia(ModificadorDeEnergia);
         }
+    }
+
+    public int escolher() {
+        
+    Scanner leitor = new Scanner(System.in);
+       int verificado = 0;
+
+       while(verificado == 0){
+
+
+
+       if(escolha1 != null && escolha2 != null)
+       {
+     
+         System.out.println("Resposta: ");
+         String Resposta = leitor.next();
+         if(verificado == 0){
+            System.out.println("Digite uma reposta valída");
+         }
+
+         if(Resposta.equals(escolha1))
+         {
+            verificado = 1;
+         }
+         
+         if(Resposta.equals(escolha2))
+         {
+            verificado = 2;
+         }
+
+       } 
+    }
+       return verificado;
+
+    
     }
 
 }
