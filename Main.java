@@ -10,7 +10,7 @@ class Main {
             Personagem Meredith = new Personagem("Meredith", 100);
             Personagem Alan = new Personagem("Alan", 100);
             int Resposta;
-           
+//====================================Capítulo 1=======================================//
 
             String Titulo1 = "---- A Figura Misteriosa ----\n\n";
             String PrimeiroCapitulo = "Acordando...\n\n" +
@@ -21,10 +21,10 @@ class Main {
                         "-- Vim fazer a mesma proposta da ultima vez, poder, familia, tudo...\n" +
                         "que você desejar e a única condição é lealdade a mim...\n" +
                         "-- o que me diz?";
+Capitulo PrimeiroTexto = new Capitulo(Titulo1, PrimeiroCapitulo, null, 0);
 
-            String Escolha1SegundoCapituloo = "aceito";
-            String Escolha2QuintoCapitulo = "recuso";
-
+//====================================Capítulo 2=======================================//
+      
             String Titulo2 = "---- O paciente ----\n\n";
             String SegundoCapitulo = "AlANN... AlAAN... CORREEE!\n\n" +
                         "alguns segundos depois de aceitar a proposta, você esta em pé\n" +
@@ -32,11 +32,10 @@ class Main {
                         "você consegue ouvir uma voz gritando desesperada, uma mulher,pedindo\n" +
                         "praticamente implora para você fugir...\n" +
                         "olhando ao redor à muitos corpos ao seu redor assustado você...\n";
+Capitulo SegundoTexto = new Capitulo(Titulo2, SegundoCapitulo,  Alan, 0);
 
-            String Escolha1TerceiroCapitulo = "foge";
-            String Escolha2QuartoCapitulo = "fica";
+//====================================Capítulo 3=======================================//
 
-            // Esse capitulo se refere a segunda escolha do primeiro capitulo
             String Titulo3 = "---- Apenas uma casca ----\n\n";
             String TerceitoCapitulo = "Alan ouve sua voz e dispira na tentiva e fugir, infelizmente você está\n" +
                         "com ferimentos graves, mas mesmo assim tentava fugir, daquelas coisas...\n" +
@@ -50,6 +49,9 @@ class Main {
                         "pedaço de carne, sem vida, apenas o vazio...\n" +
                         "Meredith perdeu 100 de vida\n" +
                         "-- Não preocupe ele vai se juntar a você rsrsrs...\n\n";
+Capitulo TerceiroTexto = new Capitulo(Titulo3, TerceitoCapitulo, Meredith, -100);
+
+//====================================Capítulo 4=======================================//
 
             String Titulo4 = "---- O guerreiro ----\n\n";
             String QuartoCapitulo = "A voz implora para você fugir, mas não consegue...\n" +
@@ -63,8 +65,10 @@ class Main {
                         "-- Ele VEM TE PEG...\n\n" +
                         "você pega a mulher nos braços e consegue finalmente fugir dali...\n\n" +
                         "Alan ganha 10 de vida, como se arma sugasse a energia dos seres que ela mata";
+Capitulo QuartoTexto = new Capitulo(Titulo4, QuartoCapitulo, Alan, 10);
 
-            // se refere a Escolha2SegundoCapitulo
+//====================================Capítulo 5=======================================//
+
             String Titulo5 = "---- Mal entendido ----\n\n";
             String QuintoCapitulo = "Sem consegui falar, você balança a cabeça recusa...\n" +
                         "neste exato momento, sons de tiros que parecem proximos\n" +
@@ -78,21 +82,15 @@ class Main {
                         "você acorda no mesmo lugar, mas a dor e sofrimento foi tanta, que sua mente foi destruida...\n"
                         +
                         "a única coisa que você fala é \"aceito... aceito..\" ";
+ Capitulo QuintoTexto = new Capitulo(Titulo5, QuintoCapitulo, Alan, -100);
 
-            Capitulo PrimeiroTexto = new Capitulo(Titulo1, PrimeiroCapitulo, Escolha1SegundoCapituloo,Escolha2QuintoCapitulo, null, 0);
-            Capitulo SegundoTexto = new Capitulo(Titulo2, SegundoCapitulo, Escolha1TerceiroCapitulo, Escolha2QuartoCapitulo, Alan, 0);
-            Capitulo TerceiroTexto = new Capitulo(Titulo3, TerceitoCapitulo, "", "", Meredith, -100);
-            Capitulo QuartoTexto = new Capitulo(Titulo4, QuartoCapitulo, "", "", Alan, 10);
-            Capitulo QuintoTexto = new Capitulo(Titulo5, QuintoCapitulo, "", "", Alan, -100);
-            
-          
-           PrimeiroTexto.mostrar();
-           Resposta = PrimeiroTexto.escolher();
-
-
-          
-           
-      if(Resposta == 1)
+//====================================Controle de Texto=======================================//
+        
+ 
+PrimeiroTexto.mostrar();
+Resposta = PrimeiroTexto.escolher();
+  
+      if(Resposta == 0)
       {
             SegundoTexto.mostrar();
             SegundoTexto.escolher();
@@ -101,17 +99,15 @@ class Main {
             {
                   TerceiroTexto.mostrar();
             }
-            else if(Resposta == 2)
+            else if(Resposta == 0)
             {
                   QuartoTexto.mostrar();
             }
       }
-      else if(Resposta == 2)
+      else if(Resposta == 1)
       {
             QuintoTexto.mostrar();
       }
       
-            
-          
-            }
-      }
+   }
+}
