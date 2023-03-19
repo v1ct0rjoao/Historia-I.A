@@ -6,7 +6,7 @@ class Capitulo {
    //====================================Atributos de classe=======================================//
     String nome;
     String texto;
-    String[] escolhas;
+    ArrayList<Escolha> escolhas; //agora aqui passa a ser uma objeto de escolha que tem texto e proximo capitulo
     Personagem personagem;
     int ModificadorDeEnergia;
    
@@ -19,6 +19,7 @@ class Capitulo {
         this.texto = TextoDoCapitulo;
         this.personagem = PersonaDoCapitulo;
         this.ModificadorDeEnergia = AlteracaoDeEnergiaDoCapitulo;
+        this.escolhas = new ArrayList<Escolha>();
     }
    //====================================Metodo de mostrar o capitulo=======================================//
 
@@ -27,14 +28,14 @@ class Capitulo {
         System.out.println(this.texto);
         System.out.println();
    //--------------------------------Verificar se tem algo no array------------------------------//
-      //   if(this.escolhas != null)
-      //   {
+        if(this.escolhas != null)
+        {
 
-      //    for (String escolha : escolhas) {
-      //    System.out.println(" --> " + escolha);
-      //    }
+         for (Escolha escolha : escolhas) {
+         System.out.println(" --> " + escolha.texto);
+         }
 
-      //   }
+        }
         
    //--------------------------------Mudança de energia------------------------------//
         if (ModificadorDeEnergia > 0)
@@ -45,27 +46,27 @@ class Capitulo {
 
     //====================================Metodo de escolher no texto=======================================//
 
-   //  public int escolher() {
+    public int escolher() {
         
-   //     Scanner leitor = new Scanner(System.in);
-   //     int verificado = -1;
+       Scanner leitor = new Scanner(System.in);
+       int verificado = -1;
    
-   //     if(escolhas != null)
-   //    {
-   //       while(verificado == -1)
-   //       {
-   //           System.out.println("Resposta: ");
-   //          String Resposta = leitor.next();
+       if(escolhas != null)
+      {
+         while(verificado == -1)
+         {
+             System.out.println("Resposta: ");
+            String Resposta = leitor.next();
 
-   //          for(int i = 0 ; i < escolhas.length; i++ ) 
-   //          {
-   //            if(Resposta.equalsIgnoreCase(escolhas[i]))
-   //            {
-   //             verificado = i;
-   //             }
-   //          }
-   //       }      
-   //    }
-   //           return verificado;
-   // }
+            for(int i = 0 ; i < escolhas.size(); i++ ) 
+            {
+              if(Resposta.equals(escolhas.get(i).texto))
+              {
+               verificado = i;
+               }
+            }
+         }      
+      }
+             return verificado;
+   }
 }
