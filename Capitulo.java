@@ -24,27 +24,38 @@ class Capitulo {
    //====================================Metodo de mostrar o capitulo=======================================//
 
     public void mostrar() {
+
+      
         System.out.println(this.nome);
         System.out.println(this.texto);
         System.out.println();
-   //--------------------------------Verificar se tem algo no array------------------------------//
-        if(this.escolhas != null)
-        {
 
+        if(this.escolhas.size() > 0)
+        {
          for (Escolha escolha : escolhas) {
          System.out.println(" --> " + escolha.texto);
          }
 
-        }
+   //--------------------------------Verificar se tem algo no array------------------------------//
+      
         
    //--------------------------------Mudança de energia------------------------------//
         if (ModificadorDeEnergia > 0)
          {
             this.personagem.ModificadorDeEnergia(ModificadorDeEnergia);
         }
-    }
+     }
+   }
 
-    //====================================Metodo de escolher no texto=======================================//
+   public void executar(){
+
+      mostrar();
+      int index = escolher();
+      Capitulo novoCapitulo = escolhas.get(index).proximoCapitulo();
+      novoCapitulo.executar();
+      }
+   
+  //====================================Metodo de escolher no texto=======================================//
 
     public int escolher() {
         
@@ -55,9 +66,11 @@ class Capitulo {
       {
          while(verificado == -1)
          {
+            String Resposta;
+            if(this.escolhas.size() > 0){
              System.out.println("Resposta: ");
-            String Resposta = leitor.next();
-
+               Resposta = leitor.next();
+         
             for(int i = 0 ; i < escolhas.size(); i++ ) 
             {
               if(Resposta.equals(escolhas.get(i).texto))
@@ -65,6 +78,7 @@ class Capitulo {
                verificado = i;
                }
             }
+          }  
          }      
       }
              return verificado;
