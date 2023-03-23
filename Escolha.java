@@ -15,5 +15,4 @@ public Capitulo proxCapitulo() {
     return proximo;
 }
 
-
 }

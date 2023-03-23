@@ -1,31 +1,41 @@
 
 public class Personagem {
 
-    String Nome;
-    int Coragem;
+   private String nome;
+   private int energia;
 
     public Personagem(String NomeDosoldado, int EnergiaDoSoldado) {
-        this.Nome = NomeDosoldado;
-        this.Coragem = 100;
+        this.nome = NomeDosoldado;
+        this.energia = 100;
     }
 
-    public void ModificadorDeEnergia(int EnergiaNojogo) {
-
-        this.Coragem = Coragem + EnergiaNojogo;
-
-        if (Coragem > 100) {
-            Coragem = 100;
+    public String getNome(){
+        return this.nome;
+    }
+    public int getEnergia(){
+        return this.energia;
+    }
+    public void setEnergia(int energia){
+        if(energia < 0){
+            this.energia = 0;
+        }else if(energia > 100){
+            this.energia = 100;
+        }else{
+            this.energia = energia;
         }
-
-        if (Coragem < 0) {
-            Coragem = 0;
-
-        }
-
-        if (Coragem == 0) {
+        
+    }
+    public void setNome(){
+        this.nome = nome;
+    }    
+    
+    public void ModificadorDeEnergia(int energiaNojogo) {
+        setEnergia(this.energia + energiaNojogo);
+       
+        if (energia == 0) {
             System.out.println();
-            System.out.println(Nome
-                    + " não resisti e perde toda sua vida");
+            System.out.println(nome
+                    + " não resisti e perdeu toda sua vida");
         }
 
     }
