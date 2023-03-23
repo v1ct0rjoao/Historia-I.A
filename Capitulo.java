@@ -8,7 +8,7 @@ class Capitulo {
     private String texto;
     private ArrayList<Escolha> escolhas; //agora aqui passa a ser uma objeto de escolha que tem texto e proximo capitulo
     private Personagem personagem;
-    private int modificadorDeEnergia;
+    private int ModificadorDeEnergia;
    
    //====================================Construtor=======================================//
     public Capitulo(String NomeDoCapitulo, String TextoDoCapitulo, 
@@ -19,7 +19,7 @@ class Capitulo {
         this.nome = NomeDoCapitulo;
         this.texto = TextoDoCapitulo;
         this.personagem = PersonaDoCapitulo;
-        this.modificadorDeEnergia = AlteracaoDeEnergiaDoCapitulo;
+        this.ModificadorDeEnergia = AlteracaoDeEnergiaDoCapitulo;
         this.escolhas = new ArrayList<Escolha>();
     }
    //====================================Metodo de mostrar o capitulo=======================================//
@@ -36,51 +36,31 @@ class Capitulo {
         if(this.escolhas.size() > 0)
         {
          for (Escolha escolha : escolhas) {
-         System.out.println(" --> " + escolha.texto);
+         System.out.println(" --> " + escolha.getTexto());
          }
 
    //--------------------------------Mudança de energia------------------------------//
-        if (modificadorDeEnergia > 0)
+        if (ModificadorDeEnergia > 0)
          {
-            this.personagem.ModificadorDeEnergia(modificadorDeEnergia);
+            this.personagem.ModificadorDeEnergia(ModificadorDeEnergia);
         }
      }
    }
    //====================================Metodos get e set =======================================//
-    
-   public String getNome(){
-      return this.nome;
-   }
-   public String getTexto(){
-      return this.texto;
-   }
+
    public ArrayList<Escolha> getEscolhas(){
       return this.escolhas;
    }
-   public Personagem getPersonagem(){
-       return personagem;
-   }
-   public int getModificadorDeEnergia(){
-      return modificadorDeEnergia;
-   }
-   public void setNome(String nome){
-      this.nome = nome;
-   }
-   public void setTexto(String texto){
-      this.texto = texto;
-   }
-   public void setPersonagem(){
-      this.personagem = personagem;
-    }
-   public void  setModificadorDeEnergia(int modificadorDeEnergia){
-      this.modificadorDeEnergia = modificadorDeEnergia;
+
+   public void  setModificadorDeEnergia(int ModificadorDeEnergia){
+      this.ModificadorDeEnergia = ModificadorDeEnergia;
    }
 
    public void executar(){
 
       mostrar();
       int index = escolher();
-      Capitulo novoCapitulo = escolhas.get(index).proxCapitulo();
+      Capitulo novoCapitulo = escolhas.get(index).getProximo();
       novoCapitulo.executar();
       }
    
@@ -102,7 +82,7 @@ class Capitulo {
          
             for(int i = 0 ; i < escolhas.size(); i++ ) 
             {
-              if(Resposta.equals(escolhas.get(i).texto))
+              if(Resposta.equals(escolhas.get(i).getTexto()))
               {
                verificado = i;
                }

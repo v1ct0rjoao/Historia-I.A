@@ -94,6 +94,7 @@ primeiroCapitulo.getEscolhas().add(new Escolha("aceito", segundoCapitulo));
 primeiroCapitulo.getEscolhas().add(new Escolha("recusa", quintocCapitulo));
 segundoCapitulo.getEscolhas().add(new Escolha( "fugir", terceiroCapitulo));
 segundoCapitulo.getEscolhas().add(new Escolha("fica", quartoCapitulo));
+primeiroCapitulo.getEscolhas().add(new Escolha("ARROz", quintocCapitulo));
 
 Capitulo raiz = primeiroCapitulo;
 raiz.executar();

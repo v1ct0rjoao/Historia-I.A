@@ -9,12 +9,7 @@ public class Personagem {
         this.energia = 100;
     }
 
-    public String getNome(){
-        return this.nome;
-    }
-    public int getEnergia(){
-        return this.energia;
-    }
+
     public void setEnergia(int energia){
         if(energia < 0){
             this.energia = 0;
