@@ -90,10 +90,10 @@ Capitulo quartoCapitulo = new Capitulo(Titulo4, QuartoTexto,Alan, 10);
         
 
 
-primeiroCapitulo.escolhas.add(new Escolha("aceito", segundoCapitulo));
-primeiroCapitulo.escolhas.add(new Escolha("recusa", quintocCapitulo));
-segundoCapitulo.escolhas.add(new Escolha( "fugir", terceiroCapitulo));
-segundoCapitulo.escolhas.add(new Escolha("fica", quartoCapitulo));
+primeiroCapitulo.getEscolhas().add(new Escolha("aceito", segundoCapitulo));
+primeiroCapitulo.getEscolhas().add(new Escolha("recusa", quintocCapitulo));
+segundoCapitulo.getEscolhas().add(new Escolha( "fugir", terceiroCapitulo));
+segundoCapitulo.getEscolhas().add(new Escolha("fica", quartoCapitulo));
 
 Capitulo raiz = primeiroCapitulo;
 raiz.executar();

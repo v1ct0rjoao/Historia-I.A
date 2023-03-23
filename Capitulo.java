@@ -4,60 +4,89 @@ import java.util.Scanner;
 class Capitulo {
 
    //====================================Atributos de classe=======================================//
-    String nome;
-    String texto;
-    ArrayList<Escolha> escolhas; //agora aqui passa a ser uma objeto de escolha que tem texto e proximo capitulo
-    Personagem personagem;
-    int ModificadorDeEnergia;
+    private String nome;
+    private String texto;
+    private ArrayList<Escolha> escolhas; //agora aqui passa a ser uma objeto de escolha que tem texto e proximo capitulo
+    private Personagem personagem;
+    private int modificadorDeEnergia;
    
    //====================================Construtor=======================================//
-    public Capitulo(String NomeDoCapitulo, String TextoDoCapitulo, Personagem PersonaDoCapitulo,
+    public Capitulo(String NomeDoCapitulo, String TextoDoCapitulo, 
+    Personagem PersonaDoCapitulo,
      int AlteracaoDeEnergiaDoCapitulo)
 
     {
         this.nome = NomeDoCapitulo;
         this.texto = TextoDoCapitulo;
         this.personagem = PersonaDoCapitulo;
-        this.ModificadorDeEnergia = AlteracaoDeEnergiaDoCapitulo;
+        this.modificadorDeEnergia = AlteracaoDeEnergiaDoCapitulo;
         this.escolhas = new ArrayList<Escolha>();
     }
    //====================================Metodo de mostrar o capitulo=======================================//
 
-    public void mostrar() {
+    private void mostrar() {
 
       
         System.out.println(this.nome);
         System.out.println(this.texto);
         System.out.println();
 
+   //--------------------------------Verificar se tem algo no array------------------------------//
+      
         if(this.escolhas.size() > 0)
         {
          for (Escolha escolha : escolhas) {
          System.out.println(" --> " + escolha.texto);
          }
 
-   //--------------------------------Verificar se tem algo no array------------------------------//
-      
-        
    //--------------------------------Mudança de energia------------------------------//
-        if (ModificadorDeEnergia > 0)
+        if (modificadorDeEnergia > 0)
          {
-            this.personagem.ModificadorDeEnergia(ModificadorDeEnergia);
+            this.personagem.ModificadorDeEnergia(modificadorDeEnergia);
         }
      }
+   }
+   //====================================Metodos get e set =======================================//
+    
+   public String getNome(){
+      return this.nome;
+   }
+   public String getTexto(){
+      return this.texto;
+   }
+   public ArrayList<Escolha> getEscolhas(){
+      return this.escolhas;
+   }
+   public Personagem getPersonagem(){
+       return personagem;
+   }
+   public int getModificadorDeEnergia(){
+      return modificadorDeEnergia;
+   }
+   public void setNome(String nome){
+      this.nome = nome;
+   }
+   public void setTexto(String texto){
+      this.texto = texto;
+   }
+   public void setPersonagem(){
+      this.personagem = personagem;
+    }
+   public void  setModificadorDeEnergia(int modificadorDeEnergia){
+      this.modificadorDeEnergia = modificadorDeEnergia;
    }
 
    public void executar(){
 
       mostrar();
       int index = escolher();
-      Capitulo novoCapitulo = escolhas.get(index).proximoCapitulo();
+      Capitulo novoCapitulo = escolhas.get(index).proxCapitulo();
       novoCapitulo.executar();
       }
    
   //====================================Metodo de escolher no texto=======================================//
 
-    public int escolher() {
+    private int escolher() {
         
        Scanner leitor = new Scanner(System.in);
        int verificado = -1;

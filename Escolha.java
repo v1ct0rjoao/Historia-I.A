@@ -10,7 +10,8 @@ public Escolha(String texto, Capitulo proximo){
     this.proximo = proximo;
 }
 
-public Capitulo proximoCapitulo() {
+
+public Capitulo proxCapitulo() {
     return proximo;
 }
 
