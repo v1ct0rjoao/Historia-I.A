@@ -20,6 +20,7 @@ public class Personagem {
         }
         
     }
+    
     public void setNome(){
         this.nome = nome;
     }    

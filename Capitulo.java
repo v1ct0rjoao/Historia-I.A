@@ -1,7 +1,8 @@
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class Capitulo {
+public class Capitulo {
 
    //====================================Atributos de classe=======================================//
     private String nome;
@@ -24,6 +25,11 @@ class Capitulo {
     }
    //====================================Metodo de mostrar o capitulo=======================================//
 
+
+   public ArrayList<Escolha> getEscolhas(){
+      return this.escolhas;
+   }
+   
     private void mostrar() {
 
       
@@ -48,13 +54,7 @@ class Capitulo {
    }
    //====================================Metodos get e set =======================================//
 
-   public ArrayList<Escolha> getEscolhas(){
-      return this.escolhas;
-   }
-
-   public void  setModificadorDeEnergia(int ModificadorDeEnergia){
-      this.ModificadorDeEnergia = ModificadorDeEnergia;
-   }
+   
 
    public void executar(){
 
