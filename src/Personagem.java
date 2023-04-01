@@ -24,6 +24,15 @@ public class Personagem {
     public void setNome(){
         this.nome = nome;
     }    
+
+    public String getNome() {
+        return nome;
+    }
+
+
+    public int getEnergia() {
+        return energia;
+    }
     
     public void ModificadorDeEnergia(int energiaNojogo) {
         setEnergia(this.energia + energiaNojogo);
@@ -35,5 +44,8 @@ public class Personagem {
         }
 
     }
+
+
+ 
 
 }
