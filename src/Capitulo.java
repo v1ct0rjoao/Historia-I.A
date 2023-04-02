@@ -11,11 +11,12 @@ public class Capitulo {
     private ArrayList<Escolha> escolhas; //agora aqui passa a ser uma objeto de escolha que tem texto e proximo capitulo
     private Personagem personagem;
     private int ModificadorDeEnergia;
+   Scanner respostas = new Scanner(System.in);
    
    //====================================Construtor=======================================//
     public Capitulo(String NomeDoCapitulo, String TextoDoCapitulo, 
     Personagem PersonaDoCapitulo,
-     int AlteracaoDeEnergiaDoCapitulo)
+     int AlteracaoDeEnergiaDoCapitulo, Scanner scan)
 
     {
         this.nome = NomeDoCapitulo;
@@ -23,6 +24,7 @@ public class Capitulo {
         this.personagem = PersonaDoCapitulo;
         this.ModificadorDeEnergia = AlteracaoDeEnergiaDoCapitulo;
         this.escolhas = new ArrayList<Escolha>();
+        this.respostas = scan;
     }
    //====================================Metodo de mostrar o capitulo=======================================//
 

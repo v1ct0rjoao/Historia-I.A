@@ -8,9 +8,12 @@ class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
     
-    ControleDeArquivos teste = new ControleDeArquivos();
+        Scanner scan = new Scanner(System.in);
+            ControleDeArquivos teste = new ControleDeArquivos();
     HashMap<String,Personagem> personagens =  teste.receberPersonagem("rsc/ArquivoDosPersonagens.txt");
-
-    Personagem Alan = personagens.get("Alan");
+    HashMap<String,Capitulo> capitulos =  teste.receberCapitulos("rsc/ArquivoDosCapitulos.txt", personagens, scan );
+ 
+     Capitulo raiz = capitulos.get("A Figura Misteriosa");
+     raiz.executar();
     }
 }
