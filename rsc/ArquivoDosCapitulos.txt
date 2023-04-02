@@ -109,7 +109,8 @@ A única coisa que você fala é - aceito.
 PERSONAGEM
 Alan
 ENERGIA
--100
+90
+
 
 ESCOLHA
 CAPITULO IN

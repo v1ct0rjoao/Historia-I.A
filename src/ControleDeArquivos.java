@@ -1,11 +1,17 @@
 import java.io.Console;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutput;
+import java.io.ObjectOutputStream;
 import java.net.NetPermission;
 import java.util.HashMap;
 import java.util.Scanner;
 
 import javax.management.RuntimeMBeanException;
+
+import javafx.beans.binding.ObjectExpression;
 
 
 public class ControleDeArquivos{
@@ -100,8 +106,12 @@ public static String TEXTO = "TEXTO";
     
   }
   return capitulos;
-    
-  }
+}
+  
+
+
+               
+
   private void construtorDeEscolhas(HashMap<String, Capitulo> capitulos, Scanner scannerDosCapitulos) {
     String linhaDeDados;
     String capitloIn;

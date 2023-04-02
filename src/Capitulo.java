@@ -1,5 +1,10 @@
 
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -61,11 +66,57 @@ public class Capitulo {
 
    public void executar(){
 
-      mostrar();
-      int index = escolher();
-      Capitulo novoCapitulo = escolhas.get(index).getProximo();
-      novoCapitulo.executar();
-      }
+        mostrar();
+        int index = escolher();
+        Capitulo novoCapitulo = escolhas.get(index).getProximo();
+        novoCapitulo.executar();
+   }
+
+   // public void Progresso(Capitulo capituloDeParada){
+    
+   //    try {
+   //      //classe que da pra salvar conteudo em um arquivo
+   //     FileOutputStream fileProgress = new FileOutputStream("rsc/Arquivo.txt");
+   //     ObjectOutputStream escritaDearquivo = new ObjectOutputStream(fileProgress);
+      
+   //     //esse objeto tem que escrevre no arquivo ne
+   //      escritaDearquivo.writeObject(capituloDeParada);
+   //      escritaDearquivo.close();
+   //      fileProgress.close();
+   //    } catch (IOException e) {
+   //      // TODO Auto-generated catch block
+   //      e.printStackTrace();
+   //    }
+   // }
+
+   // public static Capitulo leituraDeArquivo(){
+
+   //    Capitulo progresso = null;
+   //     //nesse caso ele vai escrevre o que ta no capitulo no arquivo
+   //     try {
+   //       //classe que da pra salvar conteudo em um arquivo
+   //      FileInputStream fileSave= new FileInputStream("rsc/Arquivo.txt");
+   //      ObjectInputStream escrita = new ObjectInputStream(fileSave);
+   //     progresso = (Capitulo) escrita.readObject();
+   //      //esse objeto tem que escrevre no arquivo ne
+   
+   //       escrita.close();
+   //       fileSave.close();
+   //     } catch (IOException e) {
+   //       // TODO Auto-generated catch block
+   //       e.printStackTrace();
+   //     }catch(ClassNotFoundException a){
+   //        a.printStackTrace();
+   //     }
+
+   //      return progresso;
+      
+   //    }
+
+
+      
+
+
    
   //====================================Metodo de escolher no texto=======================================//
 
@@ -97,6 +148,5 @@ public class Capitulo {
              return verificado;
    }
 
-
- 
 }
+ 
