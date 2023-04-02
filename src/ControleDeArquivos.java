@@ -13,7 +13,7 @@ public class ControleDeArquivos{
 public static final String PERSONAGEM = "PERSONAGEM";
 public static final String CAPITULO = "CAPITULO";
 public static final String ESCOLHA = "ESCOLHA";
-
+public static String TEXTO = "TEXTO";
 
 // Lê os dados dos personagens a partir do arquivo indicado pelo parâmetro pathFileCharacters
  
@@ -43,6 +43,8 @@ public static final String ESCOLHA = "ESCOLHA";
     // Cria um objeto Personagem e adiciona ao mapa de personagens
          Personagem personagem = new Personagem(NOMEDOPERSONAGEM, ENERGIA);
          personagens.put(NOMEDOPERSONAGEM, personagem);
+
+
       }
 
     scannerDePersonagens.close();
@@ -121,14 +123,21 @@ public static final String ESCOLHA = "ESCOLHA";
       Scanner scannerDosCapitulos) {
     String linhaDeDados;
     String titulo;
-    String texto;
+    String texto = "";
     String nomePersonagem;
     int variacaoDeEnergia;
     linhaDeDados = scannerDosCapitulos.nextLine();//TITULO
     titulo = scannerDosCapitulos.nextLine(); 
     linhaDeDados =  scannerDosCapitulos.nextLine();//TEXTO
-    texto = scannerDosCapitulos.nextLine();
-    linhaDeDados = scannerDosCapitulos.nextLine();//NOME DO PERSONAGEM
+    linhaDeDados = "";
+    while(!linhaDeDados.equals(PERSONAGEM))
+    {
+      
+      texto += linhaDeDados + "\n";
+      linhaDeDados = scannerDosCapitulos.nextLine();//NOME DO PERSONAGEM
+      
+    }
+
     nomePersonagem = scannerDosCapitulos.nextLine(); 
     linhaDeDados = scannerDosCapitulos.nextLine();//VARIAÇÃO DE ENERGIA 
     variacaoDeEnergia = Integer.parseInt(scannerDosCapitulos.nextLine());

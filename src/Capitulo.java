@@ -41,18 +41,18 @@ public class Capitulo {
         System.out.println();
 
    //--------------------------------Verificar se tem algo no array------------------------------//
-      
+      if(escolhas != null){
         if(this.escolhas.size() > 0)
         {
          for (Escolha escolha : escolhas) {
          System.out.println(" --> " + escolha.getTexto());
          }
-
+      }
+   
    //--------------------------------Mudança de energia------------------------------//
-        if (ModificadorDeEnergia > 0)
-         {
-            this.personagem.ModificadorDeEnergia(ModificadorDeEnergia);
-        }
+  
+         this.personagem.ModificadorDeEnergia(ModificadorDeEnergia);
+         
      }
    }
    //====================================Metodos get e set =======================================//
@@ -80,7 +80,8 @@ public class Capitulo {
          {
             String Resposta;
             if(this.escolhas.size() > 0){
-             System.out.println("Resposta: ");
+               System.out.println();
+             System.out.println("DIGITE: ");
                Resposta = leitor.next();
          
             for(int i = 0 ; i < escolhas.size(); i++ ) 
@@ -95,4 +96,7 @@ public class Capitulo {
       }
              return verificado;
    }
+
+
+ 
 }

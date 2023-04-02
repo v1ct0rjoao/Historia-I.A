@@ -2,7 +2,13 @@ CAPITULO
 TITULO
 A Figura Misteriosa
 TEXTO
-ainda meio atordoado você ouve uma voz. Olá Alan, espero que ainda se lembre de mim!!-disse uma figura obscura. Antes que levantasse da cama, uma força incomum empurra você. Acho que não rsrsr -disse a figura em tom irônico. Vim fazer a mesma proposta da ultima vez, poder, familia, tudo o que você desejar e a única condição é lealdade a mim -disse a figura com sorriso de canto.o que me diz?
+Você ainda estava meio atordoado quando uma voz soou em seus ouvidos. 
+Olá, Alan. Espero que ainda se lembre de mim!, disse uma figura obscura. 
+Antes que pudesse levantar da cama, uma força incomum o empurrou para trás. 
+Acho que não, rsrsr, disse a figura em tom irônico.
+Vim lhe fazer a mesma proposta da última vez: poder, família, tudo o que você desejar,
+contanto que seja leal a mim, acrescentou a figura com um sorriso de canto de boca. 
+O que você me diz?
 PERSONAGEM
 Meredith
 VARIACAO DE ENERGIA:
@@ -12,7 +18,11 @@ CAPITULO
 TITULO
 O paciente
 TEXTO
--AlANN... AlAAN... CORREEE! - grita meredith. alguns segundos depois de aceitar a proposta, você esta em pé vestido como se fosse um paciente, com as mãos cobertas de sangue, você consegue ouvir uma voz gritando desesperada, uma mulher,praticamente implorando para você fugir. Olhando ao redor à muitos corpos, o que assusta você.
+ALAN! ALAN! CORRA! grita Meredith desesperada. 
+Alguns segundos depois de aceitar a proposta, você se encontra em pé, 
+vestido como um paciente, com as mãos cobertas de sangue. 
+Você ouve uma voz feminina gritando, implorando para que você fuja. Olhando ao redor,
+você vê muitos corpos, o que o assusta profundamente.
 PERSONAGEM
 Alan
 VARIACAO DE ENERGIA
@@ -30,7 +40,17 @@ CAPITULO
 TITULO
 Meredith, quem será ela?
 TEXTO
-Alan ouve sua voz e consegui fugir. Infelizmente, você está om ferimentos graves, tenta se libertar da coisa que te agarrou, mas não consegue - não fujaa Meredith, ele te deixou para atrás, ele nem lembra quem é você - disse a criatura a voz sussura em seus ouvidos, com um tom de deboche. Cada parte do seu corpo fica em choque, o medo toma conta como se fosse um vírus o homem, ou sei la, a criatura, te agarra pelo pescoço e te joga na parede.  Já viu o inferno Meredith? - disse a criatura acedendo os olhos segurando você pelo pescoço ele aproxima aqueles olhos de fogo e cada gota de alegria epaz dentro do seu corpo esvazia, tornando você um pedaço de carne, sem vida, apenas o vazio. Meredith perdeu 100 de vida. - Não preocupe ele vai se juntar a você rsrsrs - disse a criatura sorrindo
+Alan ouve a voz de Meredith e consegue fugir. 
+Infelizmente, ela não teve a mesma sorte. 
+Você tenta se libertar da criatura que te agarrou, mas é em vão. 
+Não fuja, Meredith. Ele te deixou para trás, nem lembra quem você é, s
+ussurra a criatura em seu ouvido, debochando.
+O medo toma conta do seu corpo quando a criatura te joga na parede, 
+segurando você pelo pescoço. Já viu o inferno, Meredith?, pergunta ele, 
+com olhos ardentes. 
+Cada gota de alegria e paz em seu corpo desaparece, deixando você um mero pedaço de carne sem vida.
+A criatura sorri ao dizer: Não se preocupe, ele vai se juntar a você, rsrsrs.
+Meredith perde 100 de vida.
 PERSONAGEM
 Meredith
 VARIACAO DE ENERGIA:
@@ -48,7 +68,19 @@ CAPITULO
 TITULO
 O guerreiro
 TEXTO
-voz implora para você fugir, mas você não consegue.     Um sentimento de fúria e vontade toma conta do seu corpo e o bracelente no seu braço direito, se torna uma especie de armadura e todo seu braço direito fica coberto dessa armadura e sem pensar você avança em direção aos homens que estão atacando Meredith, o primeiro deles mal ver você se aproximando e ele so senti que estava sem a cabeça segundos depois o outro tenta fugir, mas suas mãos e braços são arrancados. já no chão, você pisa na cabeça que foi decepada. - Ele VEM TE PEG... - disse a cabeça antes de ser esmagada. você pega a mulher nos braços e consegue finalmente fugir dali. Alan ganha 10 de vida, como se arma sugasse a energia dos seres que ela mata
+Você ouve a voz de Meredith implorando para você fugir, 
+mas a sua vontade de protegê-la é mais forte. 
+De repente, um sentimento de fúria e determinação toma conta do seu corpo, 
+e o bracelete em seu braço direito se transforma em uma armadura, 
+cobrindo todo o seu braço. Sem pensar duas vezes, 
+você avança em direção aos homens que estão atacando Meredith. 
+O primeiro deles mal vê você se aproximando, e só percebe que perdeu a 
+cabeça segundos depois. O outro tenta fugir, mas você arranca seus braços e mãos com facilidade. 
+Já no chão, você pisa na cabeça que foi decepada e a esmaga com força. Antes de morrer,
+a cabeça ainda consegue dizer: Ele vem te pegar... Você pega Meredith nos braços e 
+consegue finalmente fugir dali. Enquanto corre, você sente o bracelete em seu braço 
+sugando a energia dos seres que você matou, e percebe que sua vida começa a se recuperar.
+Alan ganha 10 pontos de vida.
 PERSONAGEM
 Alan
 ENERGIA
@@ -66,7 +98,14 @@ CAPITULO
 TITULO
 Mal entendido
 TEXTO
-Sem consegui falar, você balança a cabeça recusa. neste exato momento, sons de tiros você ouve tiros que parecem proximos, muitos gritos e pessoas pedindo socorro. você devia ter aceitado Alan, era a única forma de salvar essas pessoas - disse a figura. A figura que falava com você sumia lentamente como poeira ao vento. todos os sons de pessoas morrendo, gritando, desesperadas se repetem milhares de vezes na sua cabeça. Alan perde 90 de vida ALGUNS MESES DEPOIS. você acorda no mesmo lugar, mas a dor e sofrimento foi tanta, que sua mente foi destruida. A única coisa que você fala é - aceito.
+Sem consegui falar, você balança a cabeça recusa. neste exato momento,
+sons de tiros você ouve tiros que parecem proximos, muitos gritos e pessoas pedindo socorro. 
+você devia ter aceitado Alan, era a única forma de salvar essas pessoas - disse a figura.
+A figura que falava com você sumia lentamente como poeira ao vento.
+todos os sons de pessoas morrendo, gritando, desesperadas se repetem milhares de vezes na sua cabeça.
+Alan perde 90 de vida ALGUNS MESES DEPOIS. 
+você acorda no mesmo lugar, mas a dor e sofrimento foi tanta, que sua mente foi destruida.
+A única coisa que você fala é - aceito.
 PERSONAGEM
 Alan
 ENERGIA
@@ -79,4 +118,6 @@ PRIMEIRA ESCOLHA
 recusa
 CAPITULO OUT 
 Mal entendido
+
+
 
