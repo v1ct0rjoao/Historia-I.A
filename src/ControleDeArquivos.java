@@ -1,26 +1,14 @@
-import java.io.Console;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
-import java.net.NetPermission;
 import java.util.HashMap;
 import java.util.Scanner;
-
-import javax.management.RuntimeMBeanException;
-
-import javafx.beans.binding.ObjectExpression;
-
 
 public class ControleDeArquivos{
 
 public static final String PERSONAGEM = "PERSONAGEM";
 public static final String CAPITULO = "CAPITULO";
 public static final String ESCOLHA = "ESCOLHA";
-public static String TEXTO = "TEXTO";
-
 // Lê os dados dos personagens a partir do arquivo indicado pelo parâmetro pathFileCharacters
  
   HashMap<String,Personagem> receberPersonagem(String pathFileCharacters)
