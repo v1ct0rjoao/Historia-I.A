@@ -16,15 +16,15 @@ class Main extends Application {
     HashMap<String,Capitulo> capitulos =  controle.receberCapitulos("rsc/ArquivoDosCapitulos.txt", personagens, scan );
  
 
-    launch();
-    
+    launch(args);
+
      Capitulo raiz = capitulos.get("A Figura Misteriosa");
      raiz.executar();
     }
 
     @Override
     public void start(Stage arg0) throws Exception {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'start'");
+        
+     
     }
 }
