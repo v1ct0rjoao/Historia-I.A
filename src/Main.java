@@ -2,7 +2,12 @@
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.regex.PatternSyntaxException;
+
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 
@@ -24,7 +29,14 @@ class Main extends Application {
 
     @Override
     public void start(Stage arg0) throws Exception {
-        
+      FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("src\tela.fxml"));
+      Parent root = fxmlLoader.load();
+      Scene tela = new Scene(root);
+
+      arg0.setTitle("Projeto de P2");
+      arg0.setScene(tela);
+      arg0.show();
+
      
     }
 }
